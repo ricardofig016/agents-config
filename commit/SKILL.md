@@ -18,13 +18,10 @@ Commit all local changes, structured into logical commits, running every git com
    ```powershell
    $message = @(
      'feat(scope): description'
-     ''
-     'Committed-by: <model-name> on behalf of Ricardo'
    ) -join "`n"
    $message | git commit -F -
    ```
-   The trailer is unconditional: every commit made through this skill ends with it. `<model-name>` is your own model or agent name.
-7. **Verify every commit after it lands.** Run `git log -1 --format=%B` and confirm `Committed-by:` trailer is present; run `git status --short` and confirm the intended paths are committed. Repeat both checks before retrying a commit command that exited nonzero.
+7. **Verify every commit after it lands.** Run `git status --short` and confirm the intended paths are committed. Repeat the check before retrying a commit command that exited nonzero.
 
 Run the commits immediately; the commit request is the authorization. The user's request names the git operations to run: commits by default, plus push, tag, reset, or rebase when the user names them. To repair a malformed message, such as a stray BOM or a truncated subject, amend the message of an unpushed commit you just created, regenerating the full message, and let the amend cover that message alone.
 
@@ -38,8 +35,6 @@ Run the commits immediately; the commit request is the authorization. The user's
 <type>(<scope>): <description>
 
 [optional body]
-
-Committed-by: <model-name> on behalf of Ricardo
 ```
 
 - All lowercase: type, scope, and description.
@@ -63,8 +58,6 @@ Committed-by: <model-name> on behalf of Ricardo
 
 ```
 docs(readme): correct install command
-
-Committed-by: GLM 5.3 Flash on behalf of Ricardo
 ```
 
 Title-only is the norm. A body is for large commits whose changes cannot be summarized in the title. Bodies are discouraged:
@@ -75,6 +68,4 @@ feat(server/auth): add password reset flow
 - add forgot password form
 - implement email verification
 - add password reset endpoint
-
-Committed-by: GLM 5.3 Flash on behalf of Ricardo
 ```
