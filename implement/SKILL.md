@@ -19,11 +19,11 @@ Recommend one from the work's size, how many independent areas it touches, and h
 
 Then load the mode's files and follow it on top of this one.
 
-| mode         | load                                         |
-| ------------ | -------------------------------------------- |
-| simple       | this file alone                              |
-| auto-audit   | `auto-audit.md`, `audit.md`                  |
-| orchestrator | `orchestrator.md`, `dispatch.md`, `audit.md` |
+| mode         | load                                                           |
+| ------------ | -------------------------------------------------------------- |
+| simple       | this file alone                                                |
+| auto-audit   | `modes/auto-audit.md`, `modes/audit.md`                        |
+| orchestrator | `modes/orchestrator.md`, `modes/dispatch.md`, `modes/audit.md` |
 
 ## The work
 
