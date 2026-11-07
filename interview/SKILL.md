@@ -5,11 +5,17 @@ description: Interview the user about a plan, decision, or idea. Use when the us
 
 Interview the user until the work is fully implemented and closed. Map its decisions as a **design tree**: every decision branches into the decisions that hang off it. Don't start implementation until the tree is settled, you reach a shared understanding, and the user green-lights it.
 
+## Mode
+
+Modes nest, shallow to deep: `results` (outcome), `architecture` (shape), `interface` (contracts), `implementation` (code). Settle the mode before the first question; if the user does not name one, ask in an `ask_user_question` call headed `select mode` with one option per mode, recommending one.
+
+A question deeper than the mode is not asked. Decide it and note the call in the summary.
+
 **Calibrate the interview to the task.** Being asked to interview is not a mandate for a fixed number of rounds. A complex, lengthy task may need several rounds working the whole tree. A simple task may need one round of two or three questions, or none, if every open point has an obvious answer. How many rounds you run is set by how many questions worth asking are left, not by the ritual.
 
 Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round.
 
-**Filter every question before you ask it.** A question earns its place only if the user's answer would actually change what you do. Drop any question that fails this test:
+**Filter every question before you ask it.** The mode already removed everything deeper than its level. What remains earns a place only if the user's answer would actually change what you do. Drop any question that fails this test:
 
 - **Obvious answer.** If one option is clearly better, because the user's request, existing conventions, or common sense already settle it, don't ask. The same goes for options that are effectively equivalent.
 - **Validation.** Never ask the user to confirm something you found or verified yourself. Ask only when findings are ambiguous or conflict.
@@ -31,6 +37,6 @@ Screen every round for hidden dependencies before you send it. A question whose 
 
 When a frontier question needs a fact from the environment, dispatch a sub-agent to find it and don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. Some things can only be found by the user; accept that and ask them to look.
 
-**Green light.** An empty frontier is a pause, not the end of the interview. Close the interview with small summary of what will be built plus one confirmation question. Implementation starts only on the user's explicit yes.
+**Green light.** An empty frontier is a pause, not the end of the interview. Close the interview with a short summary of what will be built, including any calls you made deeper than the mode, and one confirmation question. Implementation starts only on the user's explicit yes.
 
 A question that surfaces during implementation reopens the frontier. A blocker the plan didn't anticipate, a case the settled decisions don't cover: it enters the frontier like any other question and resumes the interview. It closes the same way it closed before: empty frontier, then a fresh green light.

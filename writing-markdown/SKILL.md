@@ -3,5 +3,5 @@ name: writing-markdown
 description: Markdown rules. Use when creating or editing any markdown file.
 ---
 
-1. Avoid tables where possible
-2. Don't hard wrap text or break lines based on line width.
+1. Prefer structured text over tables. Use tables only when presenting matrix data where other formats reduce readability.
+2. Format paragraphs and list items as continuous single lines. Do not apply hard wraps or arbitrary line breaks.
