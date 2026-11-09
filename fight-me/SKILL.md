@@ -1,6 +1,6 @@
 ---
 name: fight-me
-description: Use when to critically challenge, stress-test, or debate an idea, design choice, or proposed change.
+description: Use to critically challenge, stress-test, or debate an idea, design choice, or proposed change.
 disable-model-invocation: true
 ---
 
