@@ -27,4 +27,4 @@ Run the commits immediately; the commit request is the authorization. The user's
 
 ## Rules
 
-**Hands off the repo.** Run git commands only; don't alter any file in the repo unless the user's request says to, and don't create commit-message temp files. The working tree wins, exactly as it stands. Commit it as-is and report any surprises to the user. Use the `ask_user_question` tool to clarify the user's intent when the change set is ambiguous.
+**Hands off the repo.** Run git commands only; don't alter any file in the repo unless the user's request says to, and don't create commit-message temp files. The working tree wins, exactly as it stands. Commit it as-is and report any surprises to the user. Ask the user to clarify their intent when the change set is ambiguous.

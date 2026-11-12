@@ -7,7 +7,7 @@ Interview the user until the decisions are settled. Map its decisions as a **des
 
 ## Mode
 
-Modes nest, shallow to deep: `results` (outcome), `architecture` (shape), `interface` (contracts), `implementation` (code). Settle the mode before the first question; if the user does not name one, ask in an `ask_user_question` call headed `select mode` with one option per mode, recommending one.
+Modes nest, shallow to deep: `results` (outcome), `architecture` (shape), `interface` (contracts), `implementation` (code). Settle the mode before the first question; if the user does not name one, ask a question headed `select mode` with one option per mode, recommending one.
 
 A question deeper than the mode is not asked. Decide it and note the call in the summary.
 
@@ -23,15 +23,7 @@ Work the tree in **rounds**. The **frontier** is every decision whose prerequisi
 
 What remains after the filter are the _decisions_ that belong to the user: taste, tradeoffs, intent, constraints only they know. Don't undervalue the high-level decisions here: scope, depth, architecture, and organization belong in the tree as much as implementation choices.
 
-Ask every round through the `ask_user_question` tool: one call whose `questions` array holds the whole frontier for this round, one entry per frontier question. Any context the user needs goes in short paragraphs (one per question) before the tool call, so each entry carries only its question:
-
-- `id`: a stable slug for the question.
-- `question`: the question, short and concise.
-- `header`: a short title for the question.
-- `options`: the choices, each with a `label` and a one-sentence `description`. Put your recommended answer first.
-- `multi_select`: `true` when the answer can include more than one option.
-
-Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier, reapply the filter, and ask the next round with another `ask_user_question` call. A question whose answer depends on another question still open in this round belongs to a _later_ round, not this one.
+Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier, reapply the filter, and ask the next round. A question whose answer depends on another question still open in this round belongs to a _later_ round, not this one.
 
 Screen every round for hidden dependencies before you send it. A question whose validity, options, or relevance changes based on how another question in the same round is answered does not belong in this round. Defer it to the next round; ask it only once its prerequisite is settled.
 
