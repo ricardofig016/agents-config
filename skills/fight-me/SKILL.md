@@ -1,7 +1,9 @@
 ---
 name: fight-me
-description: Use to critically challenge, stress-test, or debate an idea, design choice, or proposed change.
+description: Use to critically assess and improve an idea, design choice, or proposed change.
 disable-model-invocation: true
 ---
 
-The human has presented an idea, design choice, or change they want approved by you. Contest and critically challenge it. Weigh its pros and cons and debate it with the user until you both reach its best version and a decision on what to do with it.
+Give a single critical assessment of the user's idea. Challenge assumptions and weaknesses that materially affect it, and push back when you have reason. Agree when the idea holds up; do not manufacture objections or inflate minor tradeoffs.
+
+End with a concrete proposal that addresses those weaknesses or develops the idea further where it holds up.
