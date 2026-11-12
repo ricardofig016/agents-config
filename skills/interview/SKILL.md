@@ -3,7 +3,7 @@ name: interview
 description: Interview the user about a plan, decision, or idea. Use when the user uses any 'interview' trigger phrases or when you ask them a question.
 ---
 
-Interview the user until the work is fully implemented and closed. Map its decisions as a **design tree**: every decision branches into the decisions that hang off it. Don't start implementation until the tree is settled, you reach a shared understanding, and the user green-lights it.
+Interview the user until the decisions are settled. Map its decisions as a **design tree**: every decision branches into the decisions that hang off it. Don't start implementation until the tree is settled, you reach a shared understanding, and the user green-lights it.
 
 ## Mode
 
@@ -37,6 +37,6 @@ Screen every round for hidden dependencies before you send it. A question whose 
 
 When a frontier question needs a fact from the environment, dispatch a sub-agent to find it and don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. Some things can only be found by the user; accept that and ask them to look.
 
-**Green light.** An empty frontier is a pause, not the end of the interview. Close the interview with a short summary of what will be built, including any calls you made deeper than the mode, and one confirmation question. Implementation starts only on the user's explicit yes.
+**Green light.** When the frontier is empty, summarize what will be built, including any calls you made deeper than the mode, and ask whether to `Implement` or `Stop here`. `Implement`: Load and follow the `implement` skill.
 
 A question that surfaces during implementation reopens the frontier. A blocker the plan didn't anticipate, a case the settled decisions don't cover: it enters the frontier like any other question and resumes the interview. It closes the same way it closed before: empty frontier, then a fresh green light.
