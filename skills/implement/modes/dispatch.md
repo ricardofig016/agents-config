@@ -14,6 +14,7 @@ This is a skeleton. Modify it to fit your use case, the type of work, the requir
 
 **Rules.** Every dispatch carries these.
 
+- Include the selected style and its file path from `SKILL.md`. Have the worker read and apply it.
 - Report a file that looks like another worker is changing it, and leave that file alone until you are answered.
 - Run only the tests that cover your change.
 - Report a decision the requirements did not settle, and report a departure from what the user asked for instead of making it quietly.

@@ -5,11 +5,13 @@ description: Implement a feature end to end. Use when asked to implement or buil
 
 Carry the work to the end: every requirement in place, and the tests that cover it run.
 
-## Mode
+## Mode and style
 
-The mode decides how the work gets done, so it is settled before the work starts.
+Mode decides who does the work. Style guides how the solution is built. Settle both before the work starts; any mode can use either style.
 
-The user's message may name it. When the message does not, ask as your first act, in a single `ask_user_question`, with one option per mode:
+The user's message may name either or both. Ask for any missing selection as your first act, using one question per missing selection in a single question-tool call.
+
+### Mode
 
 1. `simple`. You implement the work in this session.
 2. `auto-audit`. You implement it, then a fresh subagent audits it against the requirements, and you close the loop on what it finds.
@@ -24,6 +26,12 @@ Then load the mode's files and follow it on top of this one.
 | simple       | this file alone                                                |
 | auto-audit   | `modes/auto-audit.md`, `modes/audit.md`                        |
 | orchestrator | `modes/orchestrator.md`, `modes/dispatch.md`, `modes/audit.md` |
+
+### Style
+
+Offer `lazy` and `engineer`, recommending one. Load [styles/lazy.md](styles/lazy.md) or [styles/engineer.md](styles/engineer.md) accordingly.
+
+Apply the style throughout the work and pass its file path to workers and auditors.
 
 ## The work
 
