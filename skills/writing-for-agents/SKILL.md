@@ -3,7 +3,9 @@ name: writing-for-agents
 description: Writing for agents. Use when creating or editing skills, AGENTS.md, any doc an agent reads, or instructions for agents.
 ---
 
-An agent reading your instructions is intelligent. It infers, reasons, and decides. Write to that.
+An agent reading your instructions is as intelligent as you. It infers, reasons, and decides. Write to that.
+
+Keep instructions simple and short; add detail only when it changes the agent's behavior.
 
 Hand over what it cannot infer: the outcome, why it matters, the constraints, what finished looks like. The route is its own. A step earns its place where the default would go wrong or order carries meaning. Written anyway, it competes with the reader's judgment, and the step wins.
 
@@ -16,10 +18,6 @@ A pointer sends the reader elsewhere and names the cases that should follow it. 
 Inline what every run needs. Push out what only some reach. Keep a concept's parts together.
 
 Length past need thins attention. Split when one case earns its own file, not when the file grows.
-
-## Leading words
-
-Carry an idea as a token the reader already holds (`lesson`, `fog of war`), repeated rather than explained. Prefer an existing word; a coinage pays in definition. Reuse it in prompts, docs, and code.
 
 ## Pruning
 
