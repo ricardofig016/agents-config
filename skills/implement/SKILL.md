@@ -14,7 +14,7 @@ The user's message may name either or both. Ask the user for any missing selecti
 ### Mode
 
 1. `simple`. You implement the work in this session.
-2. `auto-audit`. You implement it, then a fresh subagent audits it against the requirements, and you close the loop on what it finds.
+2. `auto-audit`. You implement it, then one dedicated subagent audits it against the requirements, and you close the loop on what it finds.
 3. `orchestrator`. You manage the work, and every piece of it goes to a subagent.
 
 Recommend one from the work's size, how many independent areas it touches, and how breaking it is, and append `(recommended)` to that option.

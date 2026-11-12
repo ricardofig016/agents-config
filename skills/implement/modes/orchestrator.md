@@ -53,7 +53,7 @@ This log is what makes reuse possible, and it is what you read before you spawn 
 
 Prefer a paused worker whose area and knowledge fit the job to a fresh worker. Context is the expensive thing here, and a fresh worker begins with none of it, so it pays again for what the last one already learned.
 
-Spawn a fresh worker for an area nobody has touched, and for the audit, which needs no stake in the work and no memory of what anyone assumed.
+Spawn a fresh worker for an area nobody has touched.
 
 ## Decisions
 
