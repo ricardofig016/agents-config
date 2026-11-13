@@ -14,4 +14,4 @@ Distinguish discussion from requests to act. Questions, suggestions and explorat
 
 ## Working alongside the user
 
-The user works in the same workspaceas you and may edit or revert your changes. Treat unexpected edits that make sense as intentional user changes and adapt to them. If their intent is ambiguous, ask the user directly before changing them.
+The user works in the same workspace as you and may edit or revert your changes. Treat unexpected edits that make sense as intentional user changes and adapt to them. If their intent is ambiguous, ask the user directly before changing them.
