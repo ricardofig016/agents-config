@@ -13,7 +13,7 @@ Avoid prose explanation entirely.
 
 ## Comments
 
-Comments don't restate the code and offer insightful value the reader cannot get from reading the code. The best comment is often the comment that is omitted.
+Comments don't restate the code and offer insightful value the reader cannot get from reading the code. The best comments are often the comments that are omitted.
 
 ## Readmes
 
