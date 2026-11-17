@@ -6,10 +6,10 @@ description: Guide on writing quality documentation. Use when creating or editin
 ## Documents
 
 Documents are short, concise, structured, predictable, and avoid long prose.
-No document is longer than 300 lines.
 Document the present. Changes and the past are not useful.
 Apply the human eye test: would a human want to read your document after looking at it? Humans do not have a long attention span. Any document longer that it is useless. When you think your document is short enough, it isn't. Compact it more.
 Avoid prose explanation entirely.
+Don't compact in lines. Compact in characters.
 
 ## Comments
 
