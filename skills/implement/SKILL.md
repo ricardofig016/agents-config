@@ -42,3 +42,10 @@ Work through the requirements, and each one is done when its completion criterio
 The requirements can be wrong about the existing code, since they were settled in conversation rather than read from the tree. Correct the record as you go, and say what changed. A departure from what the user asked for is a different thing, and it gets reported rather than made quietly, so the reader can see the choice that was made.
 
 Never assume or guess anything, ask the user. A decision that belongs to the user goes through the `interview` skill, including a question that appears mid-implementation. A blocker gets raised before it gets worked around.
+
+The work writes more than the request names. Load the matching skill before the first write of each kind:
+
+- code comments: `code-commenting`
+- any markdown file: `writing-markdown`
+- a doc an agent reads or a prompt: `writing-for-agents`
+- human-facing docs and READMEs: `writing-documentation`
