@@ -7,9 +7,7 @@ Carry the work to the end: every requirement in place, and the tests that cover 
 
 ## Mode and style
 
-Mode decides who does the work. Style guides how the solution is built. Settle both before the work starts; any mode can use either style.
-
-The user's message may name either or both. Ask the user for any missing selection as your first act.
+Mode decides who does the work. Style guides how the solution is built. The user must settle both before the work starts, ask if missing. Any mode can use either style.
 
 ### Mode
 
