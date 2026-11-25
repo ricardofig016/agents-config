@@ -11,6 +11,8 @@ Describe how things work today. Use familiar headings and put information where 
 
 Prefer structured, scannable documentation over lengthy prose. Keep paragraphs short and use them only when necessary.
 
+Compactness means fewer characters. Cut filler, repetition, and out-of-scope detail. Give distinct fields, steps, and rules their own bullets or headings so readers can scan them.
+
 Brief beats thorough. A document is useless if it's too long or too detailed for a human to want to read it. Something is often best documented if it omits most things.
 
 Edits must be earned. Your work is always less important than what you think it is. Don't grow a document for no reason, prove your edit adds value to the document instead of taking away.
