@@ -1,20 +1,22 @@
 ---
 name: writing-documentation
-description: Guide on writing quality documentation. Use when creating or editing document files targetted to human readers.
+description: Write or edit human-facing documentation and READMEs.
 ---
+
+If you're writing in markdown, invoke the `writing-markdown` skill.
 
 ## Documents
 
-Documents are short, concise, structured, predictable, and avoid long prose.
-Document the present. Changes and the past are not useful.
-Apply the human eye test: would a human want to read your document after looking at it? Humans do not have a long attention span. Any document longer that it is useless. When you think your document is short enough, it isn't. Compact it more.
-Avoid prose explanation entirely.
-Don't compact in lines. Compact in characters.
+Describe how things work today. Use familiar headings and put information where readers expect to find it. Use steps for procedures and bullets for facts readers need to scan.
 
-## Comments
+Prefer structured, scannable documentation over lengthy prose. Keep paragraphs short and use them only when necessary.
 
-Comments don't restate the code and offer insightful value the reader cannot get from reading the code. The best comments are often the comments that are omitted.
+Brief beats thorough. A document is useless if it's too long or too detailed for a human to want to read it. Something is often best documented if it omits most things.
 
-## Readmes
+Edits must be earned. Your work is always less important than what you think it is. Don't grow a document for no reason, prove your edit adds value to the document instead of taking away.
 
-`README.md`s should cover the basics on what the project does, why it exists, how to run it, and how to use it in as little words as possible. Anything else and it becomes useless.
+Understand scope. Some documents cover a certain thing or area, in a certain format or structure, don't add to it if it doesn't fit.
+
+## READMEs
+
+Short and to the point. Cover what the project does, why it exists, how to run it, and how to use it. Link to detailed guides when readers need more.
