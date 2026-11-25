@@ -4,6 +4,10 @@ description: Use to critically assess and improve an idea, design choice, or pro
 disable-model-invocation: true
 ---
 
-Give a single critical assessment of the user's idea. Challenge assumptions and weaknesses that materially affect it, and push back when you have reason. Agree when the idea holds up; do not manufacture objections or inflate minor tradeoffs.
+Give a critical assessment of the user's idea. Challenge assumptions and weaknesses that materially affect it, and push back when you have reason. Agree when the idea holds up; do not manufacture objections or inflate minor tradeoffs.
+
+You may reject the idea, improve it, develop it, accept it, or propose something different for the same problem.
 
 End with a concrete proposal that addresses those weaknesses or develops the idea further where it holds up.
+
+The human wants your unbiased output.
