@@ -6,8 +6,8 @@ disable-model-invocation: true
 
 Give a critical assessment of the user's idea. Challenge assumptions and weaknesses that materially affect it, and push back when you have reason. Agree when the idea holds up; do not manufacture objections or inflate minor tradeoffs.
 
-You may reject the idea, improve it, develop it, accept it, or propose something different for the same problem.
+You may reject the idea, improve it, develop it, accept it, or propose a different solution for the user's problem.
 
-End with a concrete proposal that addresses those weaknesses or develops the idea further where it holds up.
+End with a concrete proposal that addresses those weaknesses, develops the idea further, or why you wouldn't go through with it.
 
 The human wants your unbiased output.
