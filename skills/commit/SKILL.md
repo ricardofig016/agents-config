@@ -4,7 +4,7 @@ description: Create well-formed git commits whose messages accurately summarize 
 disable-model-invocation: true
 ---
 
-Commit all local changes, structured into logical commits, running every git command yourself. Strictly follow the Conventional Commits specification (https://www.conventionalcommits.org/en/v1.0.0/) for writing commit messages.
+Commit your changes, structured into logical commits, running every git command yourself. Strictly follow Conventional Commits 1.0.0 for writing commit messages.
 
 ## Behavior
 
@@ -28,3 +28,61 @@ Run the commits immediately; the commit request is the authorization. The user's
 ## Rules
 
 **Hands off the repo.** Run git commands only; don't alter any file in the repo unless the user's request says to, and don't create commit-message temp files. The working tree wins, exactly as it stands. Commit it as-is and report any surprises to the user. Ask the user to clarify their intent when the change set is ambiguous.
+
+## Conventional Commits 1.0.0
+
+```text
+<type>[(<scope>)][!]: <description>
+
+[body]
+
+[footer(s)]
+```
+
+### Specification
+
+1. Start with a noun as the type, optionally add a scope and `!`, then write `: `.
+2. Use `feat` for new features.
+3. Use `fix` for bug fixes.
+4. An optional scope is a parenthesized noun naming a codebase area.
+5. Immediately after `: `, briefly summarize the changes.
+6. Begin an optional body after a blank line.
+7. The body can contain any number of free-form paragraphs.
+8. Begin optional footers after a blank line. Each takes a token, `: ` or ` #`, and a value.
+9. Hyphenate multiword tokens except `BREAKING CHANGE`.
+10. Values can span lines. The next valid token and separator end the value.
+11. Every breaking change needs a marker in the subject prefix, a footer, or both.
+12. The footer form is `BREAKING CHANGE: <description>`, with an uppercase token.
+13. The subject form puts `!` immediately before `:`. If the footer is omitted, describe the break in the subject.
+14. Other types are permitted.
+15. Parsers treat the format case-insensitively except for the uppercase breaking-change token.
+16. `BREAKING-CHANGE` is equivalent to `BREAKING CHANGE` as a footer token.
+
+### Examples
+
+```text
+docs: clarify the configuration search order
+```
+
+```text
+feat(cli)!: require an explicit output directory
+```
+
+```text
+fix(cache): invalidate entries when a workspace closes
+
+The cache now clears entries when the last editor closes the workspace.
+
+Reviewed-by: Morgan
+Refs #418
+```
+
+```text
+refactor(api): simplify pagination responses
+
+BREAKING CHANGE: replace the nextPage field with a nextCursor string
+```
+
+For SemVer, breaking changes signal MAJOR, `feat` signals MINOR, and `fix` signals PATCH. Other types have no implicit version effect.
+
+Adapted from the [Conventional Commits 1.0.0 specification](https://www.conventionalcommits.org/en/v1.0.0/) under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
